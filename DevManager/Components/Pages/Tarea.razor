@@ -1,0 +1,171 @@
+﻿@page "/tarea"
+
+@*<h3>Tarea</h3>*@
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            @*display: flex;*@
+            justify-content: center;
+            align-items: center;
+            background: #f0f2f5;
+            @*padding: 20px;*@
+        }
+
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+
+            input[type="text"]:focus,
+            input[type="date"]:focus,
+            textarea:focus,
+            select:focus {
+                border-color: #4299e1;
+                box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+            }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .priority-options {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .priority-option {
+            flex: 1;
+            position: relative;
+        }
+
+            .priority-option input[type="radio"] {
+                display: none;
+            }
+
+            .priority-option label {
+                display: block;
+                padding: 0.5rem;
+                text-align: center;
+                background: #f7fafc;
+                border: 1px solid #e2e8f0;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+        .submit-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+            .submit-btn:hover {
+                background: #3182ce;
+            }
+
+            .submit-btn:active {
+                transform: translateY(1px);
+            }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Crear Nueva Tarea</h2>
+        <form>
+            <div class="form-group">
+                <label for="title">Título de la tarea</label>
+                <input type="text" id="title" required placeholder="Ingrese el título de la tarea">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <textarea id="description" placeholder="Describe los detalles de la tarea"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="due-date">Fecha de vencimiento</label>
+                <input type="date" id="due-date" required>
+            </div>
+
+            <div class="form-group">
+                <label>Prioridad</label>
+                <div class="priority-options">
+                    <div class="priority-option">
+                        <input type="radio" name="priority" id="low" value="low">
+                        <label for="low">Baja</label>
+                    </div>
+
+                    <div class="priority-option">
+                        <input type="radio" name="priority" id="medium" value="medium">
+                        <label for="medium">Media</label>
+                    </div>
+
+                    <div class="priority-option">
+                        <input type="radio" name="priority" id="high" value="high">
+                        <label for="high">Alta</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Crear Tarea</button>
+        </form>
+    </div>
+</body>
+
+@code {
+
+}

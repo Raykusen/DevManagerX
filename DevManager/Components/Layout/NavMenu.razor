@@ -7,10 +7,56 @@
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">      
+    <nav class="flex-column">  
+        <!-------------------------------------------------------------------------------------------->
+        @* Esta seccion se mostrara sin iniciar la sesion *@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="login">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Login
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Iniciar Sesion
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="registro">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Registro de Usuario
+            </NavLink>
+        </div>
+
+        <!-------------------------------------------------------------------------------------------->
+        @* Esta seccion se mostrara solo cuando se inicie la sesion *@
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="panel_proyectos">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Panel de Proyectos
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="tarea">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Crear Tarea
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="desarrollador">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Desarrolladores
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="perfil">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Perfil de Usuario
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="acerca">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Acerca de
             </NavLink>
         </div>
     </nav>
